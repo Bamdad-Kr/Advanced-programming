@@ -1,0 +1,20 @@
+from abc import ABC, abstractmethod
+class Animal(ABC):
+    def __init__(self,animal):
+        self.animal=animal
+
+    @abstractmethod
+    def move(self):
+        pass
+
+class Dog(Animal):
+    def move(self):
+        print(f"{self.animal} walks...")
+class bird(Animal):
+    def move(self):
+        print(f"{self.animal} flies...")
+
+dog=Dog("Dog")
+dog.move()
+cat=bird("cat")
+cat.move()                   
